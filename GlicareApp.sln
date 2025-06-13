@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{BFA202EE-581B-4D3B-86D4-C5ED3152EE24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{05E68CC4-CF8F-4190-9ADE-24B717CB33F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Infrastructure", "03 - Infrastructure", "{62ADC8A0-4310-4D92-8561-ACC0DB0282F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Domain", "04 - Domain", "{801B6EFC-6B6D-4FAD-B6DF-8AC1E53B7CB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Test", "05 - Test", "{7C3B668E-A1AF-4C76-83D7-82BA57F0B7F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlicareApp.Api", "GlicareApp.Api\GlicareApp.Api.csproj", "{7C539443-F1D5-4FD7-A384-517FCD1FD194}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlicareApp.Services", "GlicareApp.Services\GlicareApp.Services.csproj", "{AEA05D26-8560-4E3A-8A17-2C14A96D431F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlicareApp.Repositories", "GlicareApp.Repositories\GlicareApp.Repositories.csproj", "{581C24E5-56E3-4702-B0BA-840BB9EA71AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlicareApp.ExternalServices", "GlicareApp.ExternalServices\GlicareApp.ExternalServices.csproj", "{B3750A89-8B97-402F-90FE-491172288532}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlicareApp.Domain", "GlicareApp.Domain\GlicareApp.Domain.csproj", "{3C81C94E-BAF8-4BE1-8B23-8C3DEB620F60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlicareApp.Test", "GlicareApp.Test\GlicareApp.Test.csproj", "{1121B0AC-C4AC-4D01-83B2-83C382CBCF2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlicareApp.CrossCuting", "GlicareApp.CrossCuting\GlicareApp.CrossCuting.csproj", "{910CF35F-83BF-4312-8B4B-76A03362D34B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70085C7D-4C94-4261-95DD-30EA7DCD39DA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C539443-F1D5-4FD7-A384-517FCD1FD194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C539443-F1D5-4FD7-A384-517FCD1FD194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C539443-F1D5-4FD7-A384-517FCD1FD194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C539443-F1D5-4FD7-A384-517FCD1FD194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA05D26-8560-4E3A-8A17-2C14A96D431F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA05D26-8560-4E3A-8A17-2C14A96D431F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA05D26-8560-4E3A-8A17-2C14A96D431F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA05D26-8560-4E3A-8A17-2C14A96D431F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581C24E5-56E3-4702-B0BA-840BB9EA71AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581C24E5-56E3-4702-B0BA-840BB9EA71AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581C24E5-56E3-4702-B0BA-840BB9EA71AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581C24E5-56E3-4702-B0BA-840BB9EA71AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3750A89-8B97-402F-90FE-491172288532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3750A89-8B97-402F-90FE-491172288532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3750A89-8B97-402F-90FE-491172288532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3750A89-8B97-402F-90FE-491172288532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C81C94E-BAF8-4BE1-8B23-8C3DEB620F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C81C94E-BAF8-4BE1-8B23-8C3DEB620F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C81C94E-BAF8-4BE1-8B23-8C3DEB620F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C81C94E-BAF8-4BE1-8B23-8C3DEB620F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1121B0AC-C4AC-4D01-83B2-83C382CBCF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1121B0AC-C4AC-4D01-83B2-83C382CBCF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1121B0AC-C4AC-4D01-83B2-83C382CBCF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1121B0AC-C4AC-4D01-83B2-83C382CBCF2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{910CF35F-83BF-4312-8B4B-76A03362D34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{910CF35F-83BF-4312-8B4B-76A03362D34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{910CF35F-83BF-4312-8B4B-76A03362D34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{910CF35F-83BF-4312-8B4B-76A03362D34B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C539443-F1D5-4FD7-A384-517FCD1FD194} = {BFA202EE-581B-4D3B-86D4-C5ED3152EE24}
+		{AEA05D26-8560-4E3A-8A17-2C14A96D431F} = {05E68CC4-CF8F-4190-9ADE-24B717CB33F2}
+		{581C24E5-56E3-4702-B0BA-840BB9EA71AA} = {62ADC8A0-4310-4D92-8561-ACC0DB0282F3}
+		{B3750A89-8B97-402F-90FE-491172288532} = {62ADC8A0-4310-4D92-8561-ACC0DB0282F3}
+		{3C81C94E-BAF8-4BE1-8B23-8C3DEB620F60} = {801B6EFC-6B6D-4FAD-B6DF-8AC1E53B7CB9}
+		{1121B0AC-C4AC-4D01-83B2-83C382CBCF2F} = {7C3B668E-A1AF-4C76-83D7-82BA57F0B7F5}
+		{910CF35F-83BF-4312-8B4B-76A03362D34B} = {05E68CC4-CF8F-4190-9ADE-24B717CB33F2}
+	EndGlobalSection
+EndGlobal
