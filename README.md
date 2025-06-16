@@ -61,35 +61,35 @@ CQRS (Command Query Responsibility Segregation) é um padrão arquitetural que s
 GlicareApp/
 │
 ├── Presentation/                   
-│   └── GlicareApp.Api					# API: Camada de implementação da API Web (controllers, middlewares)
+│   └── GlicareApp.Api					        # API: Camada de implementação da API Web (controllers, middlewares)
 ├── Application/						
-│   └── GlicareApp.Services/			# SERVICES: camada responsável pela mediação entre a interface de usuário e dominio da aplicação
-│	│	├── UseCases/					# Implementações concretas de casos de uso
-│	│	├── CommandsHandlers/			# Manipuladores de comandos (Write side)
-│	│	├── QueriesHandlers/			# Manipuladores de queries (Read side)
-│	│	├── EventsHandlers/				# Manipuladores de eventos de domínio
-│	│	├── Hubs/						# Hubs SignalR para comunicação em tempo real 
-│	│	├── Interfaces/					# Contratos de repositórios e serviços externos
-│	│	├── Queries/					# Leitura de dados
-│	│	└── Commands/					# Definições de comandos (DTOs de escrita)
-│   └── GlicareApp.CrossCuting/			# CROSSCUTING: camada onde devem ser alocadas funcionalidades que possam ser utilizadas por toda aplicação (exceto regras de domínio)
-│		├── Configurations/				# Arquivos de configurações da aplicação
-│		├── Utils/						# Arquivos utilizatios que possam ser reutilizados
-│		└── Extensions/					# Arquivos de extensão
+│   └── GlicareApp.Services/			      # SERVICES: camada responsável pela mediação entre a interface de usuário e dominio da aplicação
+│	│	├── UseCases/					              # Implementações concretas de casos de uso
+│	│	├── CommandsHandlers/			          # Manipuladores de comandos (Write side)
+│	│	├── QueriesHandlers/			          # Manipuladores de queries (Read side)
+│	│	├── EventsHandlers/				          # Manipuladores de eventos de domínio
+│	│	├── Hubs/						                # Hubs SignalR para comunicação em tempo real 
+│	│	├── Interfaces/					            # Contratos de repositórios e serviços externos
+│	│	├── Queries/					              # Leitura de dados
+│	│	└── Commands/					              # Definições de comandos (DTOs de escrita)
+│   └── GlicareApp.CrossCuting/		      # CROSSCUTING: camada onde devem ser alocadas funcionalidades que possam ser utilizadas por toda aplicação (exceto regras de domínio)
+│		├── Configurations/				          # Arquivos de configurações da aplicação
+│		├── Utils/						              # Arquivos utilizatios que possam ser reutilizados
+│		└── Extensions/					            # Arquivos de extensão
 ├── Domain/								
-│   └── GlicareApp.Domain/				# **DOMAIN:** Camada de domínio (regras de negócio)
-│		├── Entities/					# Entidades de negócio (aggregate roots)
-│		├── Dtos/						# Objetos de transferência de dados (leitura)
-│		└── DomainEvents/				# Eventos disparados pelo domínio
+│   └── GlicareApp.Domain/				      # DOMAIN: Camada de domínio (regras de negócio)
+│		├── Entities/					              # Entidades de negócio (aggregate roots)
+│		├── Dtos/						                # Objetos de transferência de dados (leitura)
+│		└── DomainEvents/				            # Eventos disparados pelo domínio
 ├── Infrastructure/						
-│   ├── GlicareApp.Repositories/		# REPOSITORIES: Camada de implementações concretas de repositórios
-│   └── GlicareApp.ExternalServices/	# EXTERNAL SERVICES: Camada de clientes de serviços externos (APIs, SMTP, etc)
+│   ├── GlicareApp.Repositories/		    # REPOSITORIES: Camada de implementações concretas de repositórios
+│   └── GlicareApp.ExternalServices/    # EXTERNAL SERVICES: Camada de clientes de serviços externos (APIs, SMTP, etc)
 ├── Tests/								
-│   └── GlicareApp.Tests/				# TESTS: Camada de testes da aplicação
-│		├── UnitTests/					# Testes unitários (isolados)
-│		└── IntegrationTests/			# Testes de integração entre componentes
-├── Dockerfile							# Configuração para containerização
-└── README.md							# Documentação principal do projeto
+│   └── GlicareApp.Tests/				        # TESTS: Camada de testes da aplicação
+│		├── UnitTests/					            # Testes unitários (isolados)
+│		└── IntegrationTests/			          # Testes de integração entre componentes
+├── Dockerfile							            # Configuração para containerização
+└── README.md							              # Documentação principal do projeto
 ```
 
 
