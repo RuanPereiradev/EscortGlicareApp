@@ -90,36 +90,6 @@ GlicareApp/
 └── README.md							              # Documentação principal do projeto
 ```
 
-
-=======
-Utilizaremos CQRS com clean Architecture
-
-```plaintext
-GlicareAppApi/
-│
-├── Presentation/                   # Camada de apresentação/interface HTTP
-│   └── WebApi                      # Implementação da API Web (controllers, middlewares)
-├── Application/                    # Camada de aplicação (casos de uso, CQRS)
-│   ├── UseCases/                   # Implementações concretas de casos de uso
-│   ├── CommandsHandlers/           # Manipuladores de comandos (Write side)
-│   ├── EventsHandlers/             # Manipuladores de eventos de domínio
-│   ├── Hubs/                       # Hubs SignalR para comunicação em tempo real 
-│   ├── Interfaces/                 # Contratos de repositórios e serviços externos
-│   └── Commands/                   # Definições de comandos (DTOs de escrita)
-├── Domain/                         # Camada de domínio (regras de negócio)
-│   ├── Entities/                   # Entidades de negócio (aggregate roots)
-│   ├── Dtos/                       # Objetos de transferência de dados (leitura)
-│   └── DomainEvents/               # Eventos disparados pelo domínio
-├── Infrastructure/                 # Camada de infraestrutura (implementações)
-│   ├── Repositories/               # Implementações concretas de repositórios
-│   └── ExternalServices/           # Clientes de serviços externos (APIs, SMTP, etc)
-├── Tests/                          # Suíte de testes automatizados
-│   ├── UnitTests/                  # Testes unitários (isolados)
-│   └── IntegrationTests/           # Testes de integração entre componentes
-├── Dockerfile                      # Configuração para containerização
-└── README.md                       # Documentação principal do projeto
-```
-
 ## Git Flow
 
 ```plaintext
