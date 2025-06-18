@@ -133,15 +133,15 @@ dev     (protegida) - Integração contínua para testes
    ```bash
    git push origin feature/nome-da-funcionalidade
    # Criar Pull Request para dev
+   - Enviar link do PR no grupo de back-end do discord
    ```
 
 4. **Code Review**
-   - Aguarde aprovação de pelo menos 1 reviewer
+   - Aguarde aprovação de qualquer outro membro do time
    - Resolva conflitos se necessário
 
 5. **Merge**
    - Após aprovação, merge para dev
-   - Delete a branch de feature
 
 ## 📝 Padrão de Commits Semânticos
 
@@ -219,18 +219,18 @@ docker run -p 5000:5000 glicareapp-backend
 ## 🆘 Suporte e Comunicação
 
 ### Canais de Comunicação
-- **Slack/Teams**: [CANAL_DO_TIME]
+- **Discord**: [Canal de texto e voz de back-end]
 - **Email**: [EMAIL_DO_TIME]
-- **Jira/Linear**: [LINK_DO_PROJETO]
+- **GitHub**: [https://github.com/orgs/Projeto-Glicare/projects/3]
 
 ### Mentores
-- **Tech Lead**: [NOME] - [CONTATO]
-- **Senior Developer**: [NOME] - [CONTATO]
+- **Tech Lead**: [Breno Machado]
+- **Tech Lead**: [David ] - [CONTATO]
 
 ### Reuniões
-- **Daily**: [HORÁRIO] - [PLATAFORMA]
-- **Sprint Planning**: [FREQUÊNCIA] - [PLATAFORMA]
-- **Code Review**: [FREQUÊNCIA] - [PLATAFORMA]
+- **Daily**: [A definir] - [Discord]
+- **Sprint Planning**: [A definir] - [Discord]
+- **Code Review**: [Compartilhar link do grupo do discord] - [Discord]
 
 ## 🎯 Próximos Passos
 
