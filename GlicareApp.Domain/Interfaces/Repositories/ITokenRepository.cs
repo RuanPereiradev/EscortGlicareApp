@@ -1,11 +1,11 @@
 using GlicareApp.Domain.Entities;
 
-namespace GlicareApp.Domain.Interfaces;
+namespace GlicareApp.Domain.Interfaces.Repositories;
 
 public interface ITokenRepository
 {
     
-    Task GetByEmailAsync(User user);
+    Task<VerificationToken?> GetByEmailAsync(User user);
     Task<VerificationToken> ForEmailAsync(string email);
     
     Task AddAsync(VerificationToken token);
