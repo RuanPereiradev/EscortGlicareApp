@@ -7,9 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="CommandsHandlers\" />
+    <Folder Include="Commands\" />
     <Folder Include="EventsHandlers\" />
     <Folder Include="Hubs\" />
     <Folder Include="DependencyInjection\" />
+    <Folder Include="Interfaces\" />
     <Folder Include="UseCases\" />
   </ItemGroup>
 

@@ -9,6 +9,12 @@
   <ItemGroup>
     <Folder Include="Dtos\" />
     <Folder Include="DomainEvents\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Interfaces\Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.1" />
   </ItemGroup>
 
 </Project>
