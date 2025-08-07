@@ -29,4 +29,10 @@
     <ProjectReference Include="..\GlicareApp.Repositories\GlicareApp.Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Http.Results">
+      <HintPath>..\..\..\..\.nuget\packages\microsoft.aspnetcore.app.ref\8.0.15\ref\net8.0\Microsoft.AspNetCore.Http.Results.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

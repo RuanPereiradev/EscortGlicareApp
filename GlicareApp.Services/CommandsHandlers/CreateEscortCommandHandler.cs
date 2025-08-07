@@ -1,49 +1,93 @@
+// -----------------------------------------------------------------------------
+// 📄 Classe: CreateEscortCommandHandler
+// 📦 Namespace: GlicareApp.Services.CommandsHandlers
+//
+// 🧠 O que é:
+// Esta classe é um "Command Handler" do padrão **CQRS** (Command Query Responsibility Segregation)
+// e é responsável por processar o comando de criação de um novo acompanhante (`CreateEscortCommand`).
+//
+// 🛠️ O que faz:
+// - Recebe os dados de um acompanhante (nome, telefone, e-mail, etc.) vindos do comando.
+// - Valida se o paciente (relacionado ao acompanhante) existe no banco de dados.
+// - Cria uma nova entidade `Escort` com os dados recebidos.
+// - Salva o acompanhante no banco através do repositório (`IEscortRepository`).
+// - Retorna o objeto `Escort` já com o ID gerado.
+//
+// 🔁 Como funciona internamente:
+// 1. Verifica se o paciente informado existe (consultando o `IPacientRepository`).
+// 2. Se não existir, lança uma exceção.
+// 3. Se existir, instancia um novo objeto `Escort` com os dados do comando.
+// 4. Usa o `IEscortRepository` para salvar esse acompanhante no banco.
+// 5. Registra logs com Serilog, tanto para sucesso quanto para erro.
+// 6. Retorna o acompanhante criado.
+//
+// 🔗 Integrações e dependências:
+// - Usa o padrão Mediator (via biblioteca MediatR) para lidar com comandos.
+// - Depende de `IEscortRepository` e `IPacientRepository` para acessar os dados no banco.
+// - Usa `Serilog` para geração de logs estruturados.
+// - A operação é assíncrona, com suporte a `CancellationToken`.
+//
+// 📌 Observações:
+// - Se o paciente informado não existir, o sistema lança uma `ArgumentException`.
+// - É uma classe típica de aplicação do padrão **Clean Architecture**, separando regras de negócio
+//   e acesso a dados.
+//
+// -----------------------------------------------------------------------------
+
 using GlicareApp.Domain.Entities;
 using GlicareApp.Domain.Interfaces.Repositories;
 using GlicareApp.Services.Commands;
 using MediatR;
+using Serilog;
 
-namespace GlicareApp.Services.CommandsHandlers;
-
-public class CreateEscortCommandHandler : IRequestHandler<CreateEscortCommand, Escort>
+namespace GlicareApp.Services.CommandsHandlers
 {
-    private readonly IEscortRepository _escortRepository;
-    private readonly IPacientRepository _pacientRepository;
-    private readonly IUnitOfWork _unitOfWork;
-    
-    public CreateEscortCommandHandler(IEscortRepository escortRepository, IUnitOfWork unitOfWork, IPacientRepository pacientRepository)
+    public class CreateEscortCommandHandler : IRequestHandler<CreateEscortCommand, Escort>
     {
-        _escortRepository = escortRepository;
-        _unitOfWork = unitOfWork;
-        _pacientRepository = pacientRepository;
-    }
-    
-    public async Task<Escort> Handle(CreateEscortCommand request, CancellationToken cancellationToken)
-    {
-        var pacient = await _pacientRepository.GetPatientByIdAsync(request.PacientId);
-        if (pacient == null)
-        {
-            throw new ArgumentException("Pacient not found.");
-        }
-        var escort = new Escort
-        {
-            Name = request.Name,
-            Phone = request.Phone,
-            Email = request.Email,
-            Relationship = request.Relationship,
-        };
+        private readonly IEscortRepository _escortRepository;
+        private readonly IPacientRepository _pacientRepository;
+        private readonly ILogger _logger;
 
-        _unitOfWork.BeginTransaction();
-        try
+        public CreateEscortCommandHandler(IEscortRepository escortRepository, IPacientRepository pacientRepository)
         {
-            await _escortRepository.InsertEscortAsync(escort);
-            _unitOfWork.Commit();
-            return escort;
+            _escortRepository = escortRepository;
+            _pacientRepository = pacientRepository;
+            _logger = Log.ForContext<CreateEscortCommandHandler>();
         }
-        catch (Exception)
+
+        public async Task<Escort> Handle(CreateEscortCommand request, CancellationToken cancellationToken)
         {
-            _unitOfWork.Rollback();
-            throw;
+            try
+            {
+                // Validate if paciente exists
+                var exist = await _pacientRepository.ExistsAsync(request.PacientId);
+                if (!exist)
+                { 
+                    throw new ArgumentException("Paciente does not exist()");
+                }
+
+                var escort = new Escort()
+                {
+                    Name = request.Name,
+                    Phone = request.Phone,
+                    Email = request.Email,
+                    Relationship = request.Relationship,
+                    PacientId = request.PacientId
+                    
+                };
+
+                // Assuming AcompanhanteRepository has an AddAsync 
+                var createdId = await _escortRepository.InsertEscortAsync(escort);
+                escort.Id = createdId;
+                _logger.Information("Successfully created acompanhante with ID {EscortId}", createdId);
+                
+                return escort;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error creating acompanhante for paciente {PacienteId}", request.PacientId);
+                throw;
+            }
         }
     }
 }

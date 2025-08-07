@@ -25,4 +25,5 @@ public class Escort
     public string Email { get; set; }
     public string Relationship { get; set; }
     
+    public string PacientId { get; set; }
 }
