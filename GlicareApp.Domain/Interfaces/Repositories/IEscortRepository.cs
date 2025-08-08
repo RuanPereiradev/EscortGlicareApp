@@ -31,4 +31,5 @@ public interface IEscortRepository
     Task<string> InsertEscortAsync(Escort escort);
     Task<string> UpdateEscortAsync(Escort escort);
     Task<string> DeleteEscortAsync(string id);
+    Task <Escort?> GetPacientByIdAsync(string pacientId);
 }

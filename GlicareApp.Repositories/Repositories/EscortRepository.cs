@@ -81,4 +81,14 @@
             var deletedId = _connection.ExecuteScalarAsync<string>(sql, new { id }, transaction: _transaction);
             return deletedId;
         }
+
+        public Task<Escort?> GetPacientByIdAsync(string pacientId)
+        {
+            if (!int.TryParse(pacientId, out int pacientIdInt))
+                throw new ArgumentException("PacientId inválido. Deve ser um número inteiro.");
+            
+            var sql = "SELECT * FROM escorts WHERE pacient_id = @pacientId";
+            return _connection.QueryFirstOrDefaultAsync<Escort>(sql, new { pacientId = pacientIdInt }, transaction: _transaction);
+            
+        }
     }

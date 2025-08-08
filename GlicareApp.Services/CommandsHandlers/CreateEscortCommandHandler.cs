@@ -66,6 +66,13 @@ namespace GlicareApp.Services.CommandsHandlers
                     throw new ArgumentException("Paciente does not exist()");
                 }
 
+                var existingEscort = await _escortRepository.GetPacientByIdAsync(request.PacientId);
+                if (existingEscort != null)
+                {
+                    throw new ArgumentException("Paciente already has an escort");
+                }
+                
+
                 var escort = new Escort()
                 {
                     Name = request.Name,
