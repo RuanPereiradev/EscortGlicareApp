@@ -47,11 +47,13 @@ namespace GlicareApp.Services.CommandsHandlers
         private readonly IEscortRepository _escortRepository;
         private readonly IPacientRepository _pacientRepository;
         private readonly ILogger _logger;
+        private readonly ITokenValidatorService _tokenValidatorService;
 
-        public CreateEscortCommandHandler(IEscortRepository escortRepository, IPacientRepository pacientRepository)
+        public CreateEscortCommandHandler(IEscortRepository escortRepository, IPacientRepository pacientRepository, ITokenValidatorService tokenValidatorService)
         {
             _escortRepository = escortRepository;
             _pacientRepository = pacientRepository;
+            _tokenValidatorService = tokenValidatorService;
             _logger = Log.ForContext<CreateEscortCommandHandler>();
         }
 
@@ -59,7 +61,6 @@ namespace GlicareApp.Services.CommandsHandlers
         {
             try
             {
-                // Validate if paciente exists
                 var exist = await _pacientRepository.ExistsAsync(request.PacientId);
                 if (!exist)
                 { 
@@ -71,6 +72,12 @@ namespace GlicareApp.Services.CommandsHandlers
                 {
                     throw new ArgumentException("Paciente already has an escort");
                 }
+
+                if (!_tokenValidatorService.ValidateToken(request.TokenAuth, request.LoginType))
+                {
+                    throw new ArgumentException("Invalid token");
+                }
+                
                 
 
                 var escort = new Escort()
@@ -83,7 +90,6 @@ namespace GlicareApp.Services.CommandsHandlers
                     
                 };
 
-                // Assuming AcompanhanteRepository has an AddAsync 
                 var createdId = await _escortRepository.InsertEscortAsync(escort);
                 escort.Id = createdId;
                 _logger.Information("Successfully created acompanhante with ID {EscortId}", createdId);

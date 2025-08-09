@@ -7,6 +7,9 @@ using Npgsql;
 using Serilog;
 using System.Data;
 using System.Reflection;
+using FluentValidation.AspNetCore;
+using GlicareApp.Services.Commands;
+using GlicareApp.Services.Implements;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,8 +44,10 @@ builder.Services.AddScoped<PostgreDbSession>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEscortRepository, EscortRepository>();
 builder.Services.AddScoped<IPacientRepository, PatientRepository>();
+builder.Services.AddScoped<ITokenValidatorService, TokenValidatorService>();
 
-builder.Services.AddControllers();
+
+builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateEscortCommandValidator>());
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

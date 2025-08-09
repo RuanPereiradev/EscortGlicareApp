@@ -9,11 +9,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="daa29fb2-6d9f-4f25-be4c-460414bf8831" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GlicareApp.Domain/Interfaces/Repositories/ITokenValidatorService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GlicareApp.Repositories/Services/EncryptionService.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Commands/CreateEscortCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Commands/CreateEscortCommandValidator.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/CommandsHandlers/CreateEscortCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Implements/TokenValidatorService.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Queries/GetAllEscortsQuery.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Queries/GetEscortByIdQuery.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Queries/GetEscortQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GlicareApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlicareApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlicareApp.Api/GlicareApp.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Api/GlicareApp.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlicareApp.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlicareApp.Domain/Entities/Escort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Domain/Entities/Escort.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlicareApp.Repositories/GlicareApp.Repositories.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Repositories/GlicareApp.Repositories.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/Commands/RegisterUserCommand.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/Commands/RequestTokenCommand.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/CommandsHandlers/RegisterUserHandler.cs" beforeDir="false" />
@@ -26,8 +35,11 @@
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/obj/GlicareApp.Services.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Services/obj/GlicareApp.Services.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Services/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Services/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlicareApp.Services/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Services/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Services/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Services/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlicareApp.Test/UnitTests/CreateCommandHandlerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Test/UnitTests/CreateCommandHandlerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +50,12 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/cadastro-acompanhante" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/GlicareApp.Services" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -61,7 +78,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "git-widget-placeholder": "feature/cadastro-acompanhante",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/ruan/RiderProjects",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -127,6 +144,11 @@
       <workItem from="1754488999201" duration="659000" />
       <workItem from="1754496636462" duration="9764000" />
       <workItem from="1754587882482" duration="9537000" />
+      <workItem from="1754685393201" duration="1538000" />
+      <workItem from="1754713455808" duration="81000" />
+      <workItem from="1754714340865" duration="765000" />
+      <workItem from="1754749347788" duration="2655000" />
+      <workItem from="1754766155778" duration="2688000" />
     </task>
     <servers />
   </component>
@@ -135,6 +157,29 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/cadastro-acompanhante" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

@@ -41,4 +41,11 @@ public class CreateEscortCommand : IRequest<Escort>
     public string Email { get; set; }
     public string Relationship { get; set; }
     public string PacientId { get; set; }
+    
+    public string LoginType { get; set; }
+    
+    public string TokenAuth { get; set; }
+    
+    public bool UseTerms { get; set; }
+    
 }

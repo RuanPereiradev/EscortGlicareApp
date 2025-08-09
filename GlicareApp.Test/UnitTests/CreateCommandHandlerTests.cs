@@ -2,6 +2,7 @@ using GlicareApp.Domain.Entities;
 using GlicareApp.Domain.Interfaces.Repositories;
 using GlicareApp.Services.Commands;
 using GlicareApp.Services.CommandsHandlers;
+using GlicareApp.Services.Implements;
 using Xunit;
 using Moq;
 namespace GlicareApp.Test.UnitTests;
@@ -27,7 +28,7 @@ public class CreateCommandHandlerTests
         
         
         //Cria o handler
-        var handler = new CreateEscortCommandHandler(escortRepositoryMock.Object, patientRepositoryMock.Object);
+        var handler = new CreateEscortCommandHandler(escortRepositoryMock.Object, patientRepositoryMock.Object, new TokenValidatorService());
 
         var request = new CreateEscortCommand
         {
