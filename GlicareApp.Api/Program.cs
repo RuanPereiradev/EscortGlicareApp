@@ -10,8 +10,24 @@ using System.Reflection;
 using FluentValidation.AspNetCore;
 using GlicareApp.Services.Commands;
 using GlicareApp.Services.Implements;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
+using Microsoft.IdentityModel.Tokens;
+//13:11
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+})
+.AddCookie()
+.AddGoogle(options =>
+{
+    options.ClientId = builder.Configuration.GetSection("GoogleKeys:ClientId").Value;
+    options.ClientSecret = builder.Configuration.GetSection("GoogleKeys:ClientSecret").Value;
+});
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()

@@ -9,8 +9,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="daa29fb2-6d9f-4f25-be4c-460414bf8831" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GlicareApp.Domain/Interfaces/Repositories/ITokenValidatorService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GlicareApp.Repositories/Services/EncryptionService.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Commands/CreateEscortCommand.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Commands/CreateEscortCommandValidator.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/CommandsHandlers/CreateEscortCommandHandler.cs" afterDir="false" />
@@ -19,10 +17,7 @@
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Queries/GetEscortByIdQuery.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/GlicareApp.Services/Queries/GetEscortQueryHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GlicareApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlicareApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GlicareApp.Api/GlicareApp.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Api/GlicareApp.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GlicareApp.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GlicareApp.Domain/Entities/Escort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Domain/Entities/Escort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GlicareApp.Repositories/GlicareApp.Repositories.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Repositories/GlicareApp.Repositories.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlicareApp.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Api/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/Commands/RegisterUserCommand.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/Commands/RequestTokenCommand.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/CommandsHandlers/RegisterUserHandler.cs" beforeDir="false" />
@@ -38,8 +33,6 @@
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Services/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Services/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GlicareApp.Services/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Services/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GlicareApp.Test/UnitTests/CreateCommandHandlerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GlicareApp.Test/UnitTests/CreateCommandHandlerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +48,7 @@
         <entry key="$PROJECT_DIR$" value="feature/cadastro-acompanhante" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/GlicareApp.Services" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -72,27 +65,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.GlicareApp.Api: http.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/ruan/RiderProjects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.GlicareApp.Api: http.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/cadastro-acompanhante&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ruan/RiderProjects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "DockerIgnore"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;DockerIgnore&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RiderProblemsViewState">
     <option name="showPreview" value="true" />
   </component>
@@ -148,7 +141,9 @@
       <workItem from="1754713455808" duration="81000" />
       <workItem from="1754714340865" duration="765000" />
       <workItem from="1754749347788" duration="2655000" />
-      <workItem from="1754766155778" duration="2688000" />
+      <workItem from="1754766155778" duration="2964000" />
+      <workItem from="1754832841825" duration="1230000" />
+      <workItem from="1754933561219" duration="2019000" />
     </task>
     <servers />
   </component>
